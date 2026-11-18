@@ -52,7 +52,7 @@ if page == "Dashboard":
             st.bar_chart(category_totals(df), y_label="Amount (₹)", alt="Total expense amount for each category")
         with right:
             st.subheader("Monthly spending")
-            st.line_chart(monthly_totals(df), y_label="Amount (₹)", alt="Expense totals by month")
+            st.bar_chart(monthly_totals(df), y_label="Amount (₹)", alt="Expense totals by month")
 
         st.subheader("Recent transactions")
         recent = df.sort_values(["Date", "ID"], ascending=False).head(5).copy()
@@ -136,3 +136,4 @@ else:
                     st.rerun()
                 except ValueError as exc:
                     st.error(str(exc))
+
