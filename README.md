@@ -46,22 +46,11 @@ python -m pytest
 | `database.py` | SQLite schema and data operations |
 | `test_db.py`, `test_expense.py` | Automated tests using a temporary database |
 
-## Publish on GitHub and deploy
+## GitHub and deployment
 
-1. Create an empty GitHub repository for this project.
-2. From this folder, initialize Git, review the files, then commit and push them:
+The public source repository is [github.com/samyak-0609/SmartSpend](https://github.com/samyak-0609/SmartSpend).
 
-   ```powershell
-   git init
-   git add .
-   git status
-   git commit -m "Build SmartSpend expense tracker"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/SmartSpend.git
-   git push -u origin main
-   ```
-
-3. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/) with GitHub, choose **Create app**, select the repository and `main` branch, and enter `app.py` as the app file. Choose a public app URL and deploy.
+To publish the app, sign in to [Streamlit Community Cloud](https://share.streamlit.io/) with GitHub, choose **Create app**, select the `samyak-0609/SmartSpend` repository and `main` branch, and enter `app.py` as the app file. Choose an available app URL and deploy.
 
 Community Cloud installs the packages listed in `requirements.txt`. The app's SQLite file is local to its runtime; treat the hosted app as a demo and do not rely on that file as durable cloud storage. For long-term shared storage, connect a hosted database before using it with important records.
 
